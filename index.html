@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Villa Price Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Smart Villa Price Finder</h1>
+</header>
+
+<section class="search-bar">
+
+<select id="city">
+<option value="">City</option>
+<option>Chennai</option>
+<option>Mumbai</option>
+<option>Delhi</option>
+<option>Bangalore</option>
+<option>Hyderabad</option>
+<option>Pune</option>
+</select>
+
+<select id="rooms">
+<option value="">Rooms</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+<select id="price">
+<option value="">Price</option>
+<option value="50">Below 50L</option>
+<option value="80">50-80L</option>
+<option value="120">80L-1.2Cr</option>
+<option value="200">Above 1.2Cr</option>
+</select>
+
+<button onclick="searchProperties()">Search</button>
+<button onclick="showAll()">Show All</button>
+
+</section>
+
+
+<h2>🔥 Limited Offers</h2>
+<div id="offers" class="grid"></div>
+
+
+<h2>Available Properties</h2>
+<div id="propertyGrid" class="grid"></div>
+
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<h2 id="modalTitle"></h2>
+
+<img id="modalImage">
+
+<p><b>City:</b> <span id="modalCity"></span></p>
+<p><b>Rooms:</b> <span id="modalRooms"></span></p>
+<p><b>Price:</b> ₹<span id="modalPrice"></span> Lakhs</p>
+
+<button onclick="buyProperty()">Buy Property</button>
+<button onclick="closeModal()">Close</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
